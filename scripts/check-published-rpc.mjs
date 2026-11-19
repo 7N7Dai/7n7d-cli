@@ -34,7 +34,7 @@ function extractUrls(text) {
 
 function hostOf(url) {
   try {
-    return new URL(url).host;
+    return new URL(url).hostname;
   } catch {
     return null;
   }
@@ -54,7 +54,14 @@ async function chainId(url) {
   if (!res.ok) throw new Error("HTTP " + res.status);
   const body = await res.json();
   if (body.error) throw new Error(body.error.message || "JSON-RPC error");
-  return body.result;
+  const id = body.result;
+  const SEPOLIA_CHAIN_ID = "0xaa36a7";
+  if (!id || id.toLowerCase() !== SEPOLIA_CHAIN_ID) {
+    throw new Error(
+      "unexpected chainId " + id + " (expected " + SEPOLIA_CHAIN_ID + " for Sepolia)"
+    );
+  }
+  return id;
 }
 
 const live = process.argv.includes("--live");
