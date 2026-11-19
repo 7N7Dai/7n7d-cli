@@ -27,6 +27,14 @@
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7N7Dai/7n7d-cli.git"
+  },
+  "homepage": "https://docs.7n7d.com/cli/commands",
+  "bugs": {
+    "url": "https://github.com/7N7Dai/7n7d-cli/issues"
+  },
   "license": "MIT",
   "overrides": {
     "esbuild": "^0.28.1"
