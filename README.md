@@ -26,7 +26,7 @@ cp .env.example .env
 ```
 
 ```
-RPC_URL=https://rpc.sepolia.org
+RPC_URL=https://ethereum-sepolia-rpc.publicnode.com
 PRIVATE_KEY=0x...
 ```
 
