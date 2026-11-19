@@ -11,7 +11,7 @@ npm install -g @7n7d/cli
 Or run locally:
 
 ```bash
-git clone <repo>
+git clone https://github.com/7N7Dai/7n7d-cli.git
 cd 7n7d-cli
 npm install
 npm run build
